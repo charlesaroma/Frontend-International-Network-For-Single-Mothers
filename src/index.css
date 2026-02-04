@@ -1,0 +1,174 @@
+/* INSM brand: fonts (Albert Sans – primary, Open Sans – secondary) */
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Open+Sans:ital,wght@0,400;0,600;0,700&display=swap");
+
+/* INSM brand: color tokens (Figma primary + secondary + tints & shades) */
+:root {
+  /* Primary – Dark Lilac (brand, nav headers) */
+  --lilac: #9e70a1;
+  --lilac-100: #ece2ec;
+  --lilac-200: #d8c6d9;
+  --lilac-300: #c5a9c7;
+  --lilac-400: #b18db4;
+  --lilac-600: #7e5a81;
+  --lilac-700: #5f4361;
+  --lilac-800: #3f2d40;
+  --lilac-900: #201620;
+
+  /* Primary – Continental Waters (secondary buttons, growth UI) */
+  --teal: #98c8cc;
+  --teal-100: #eaf4f5;
+  --teal-200: #d6e9eb;
+  --teal-300: #c1dee0;
+  --teal-400: #add3d6;
+  --teal-600: #7aa0a3;
+  --teal-700: #5b787a;
+  --teal-800: #3d5052;
+  --teal-900: #1e2829;
+
+  /* Primary – Holy White (page background) */
+  --cream: #f5f5dd;
+  --cream-100: #fdfdf8;
+  --cream-200: #fbfbf1;
+  --cream-300: #f9f9eb;
+  --cream-400: #f7f7e4;
+  --cream-600: #c4c4b1;
+  --cream-700: #939385;
+  --cream-800: #626258;
+  --cream-900: #31312c;
+
+  /* Secondary – Chewing Gum Pink (CTAs) */
+  --pink: #e490b8;
+  --pink-100: #fae9f1;
+  --pink-200: #f4d3e3;
+  --pink-300: #efbcd4;
+  --pink-400: #e9a6c6;
+  --pink-600: #b67393;
+  --pink-700: #89566e;
+  --pink-800: #5b3a4a;
+  --pink-900: #2e1d25;
+
+  /* Secondary – Mummy Brown (iconography, data viz) */
+  --brown: #7f4829;
+  --brown-100: #e5dad4;
+  --brown-200: #ccb6a9;
+  --brown-300: #b2917f;
+  --brown-400: #996d54;
+  --brown-600: #663a21;
+  --brown-700: #4c2b19;
+  --brown-800: #331d10;
+  --brown-900: #190e08;
+
+  /* Secondary – Existential Angst (body text, headlines) */
+  --dark: #090a0c;
+  --dark-100: #f5f5f5;
+  --dark-200: #cecece;
+  --dark-300: #9d9d9e;
+  --dark-400: #6b6c6d;
+}
+
+@import "tailwindcss";
+
+@theme {
+  /* Font families – Primary: Albert Sans, Secondary: Open Sans */
+  --font-primary: "Albert Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand colors → Tailwind utilities (e.g. bg-brand-lilac, text-brand-teal) */
+  --color-brand-lilac: var(--lilac);
+  --color-brand-lilac-100: var(--lilac-100);
+  --color-brand-lilac-200: var(--lilac-200);
+  --color-brand-lilac-300: var(--lilac-300);
+  --color-brand-lilac-400: var(--lilac-400);
+  --color-brand-lilac-600: var(--lilac-600);
+  --color-brand-lilac-700: var(--lilac-700);
+  --color-brand-lilac-800: var(--lilac-800);
+  --color-brand-lilac-900: var(--lilac-900);
+
+  --color-brand-teal: var(--teal);
+  --color-brand-teal-100: var(--teal-100);
+  --color-brand-teal-200: var(--teal-200);
+  --color-brand-teal-300: var(--teal-300);
+  --color-brand-teal-400: var(--teal-400);
+  --color-brand-teal-600: var(--teal-600);
+  --color-brand-teal-700: var(--teal-700);
+  --color-brand-teal-800: var(--teal-800);
+  --color-brand-teal-900: var(--teal-900);
+
+  --color-brand-cream: var(--cream);
+  --color-brand-cream-100: var(--cream-100);
+  --color-brand-cream-200: var(--cream-200);
+  --color-brand-cream-300: var(--cream-300);
+  --color-brand-cream-400: var(--cream-400);
+  --color-brand-cream-600: var(--cream-600);
+  --color-brand-cream-700: var(--cream-700);
+  --color-brand-cream-800: var(--cream-800);
+  --color-brand-cream-900: var(--cream-900);
+
+  --color-brand-pink: var(--pink);
+  --color-brand-pink-100: var(--pink-100);
+  --color-brand-pink-200: var(--pink-200);
+  --color-brand-pink-300: var(--pink-300);
+  --color-brand-pink-400: var(--pink-400);
+  --color-brand-pink-600: var(--pink-600);
+  --color-brand-pink-700: var(--pink-700);
+  --color-brand-pink-800: var(--pink-800);
+  --color-brand-pink-900: var(--pink-900);
+
+  --color-brand-brown: var(--brown);
+  --color-brand-brown-100: var(--brown-100);
+  --color-brand-brown-200: var(--brown-200);
+  --color-brand-brown-300: var(--brown-300);
+  --color-brand-brown-400: var(--brown-400);
+  --color-brand-brown-600: var(--brown-600);
+  --color-brand-brown-700: var(--brown-700);
+  --color-brand-brown-800: var(--brown-800);
+  --color-brand-brown-900: var(--brown-900);
+
+  --color-brand-dark: var(--dark);
+  --color-brand-dark-100: var(--dark-100);
+  --color-brand-dark-200: var(--dark-200);
+  --color-brand-dark-300: var(--dark-300);
+  --color-brand-dark-400: var(--dark-400);
+
+  /* Typography scale – utilities: text-display, text-h1 … text-body (sensible rem) */
+  --text-display: 3rem;
+  --text-display-line-height: 1.2;
+  --text-display-weight: 700;
+  
+  --text-h1: 2.25rem;
+  --text-h1-line-height: 1.25;
+  --text-h1-weight: 600;
+  
+  --text-h2: 1.875rem;
+  --text-h2-line-height: 1.3;
+  --text-h2-weight: 600;
+  
+  --text-h3: 1.5rem;
+  --text-h3-line-height: 1.35;
+  --text-h3-weight: 500;
+  
+  --text-h4: 1.25rem;
+  --text-h4-line-height: 1.4;
+  --text-h4-weight: 500;
+  
+  --text-body-large: 1.125rem;
+  --text-body-large-line-height: 1.5;
+  --text-body-large-weight: 400;
+  
+  --text-body: 1rem;
+  --text-body-line-height: 1.5;
+  --text-body-weight: 400;
+}
+
+/* Base: page background (cream), primary font, focus ring (accessibility) */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--cream);
+  color: var(--dark);
+}
+
+/* Visible focus for keyboard / a11y – teal */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
