@@ -13,6 +13,53 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ]
 
+  const menuCategories = [
+    {
+      title: 'Who we are',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
+      items: [
+        { name: 'About Us', path: '/about' },
+        { name: 'Who We Are', path: '/about/who-we-are' },
+        { name: 'What We Do', path: '/about/what-we-do' },
+        { name: 'Our Team', path: '/team' },
+        { name: 'Our Story', path: '/story' },
+      ]
+    },
+    {
+      title: 'What we do',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      items: [
+        { name: 'Programs', path: '/programs' },
+        { name: 'Initiatives', path: '/initiatives' },
+        { name: 'Impact', path: '/impact' },
+        { name: 'Gallery', path: '/gallery' },
+        { name: 'News', path: '/news' },
+      ]
+    },
+    {
+      title: 'How to help',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+      items: [
+        { name: 'Donate', path: '/donate' },
+        { name: 'Volunteer', path: '/volunteer' },
+        { name: 'Partner', path: '/partner' },
+        { name: 'Contact', path: '/contact' },
+      ]
+    }
+  ]
+
   // Close menu on outside click (desktop UX)
   useEffect(() => {
     const handler = (e) => {
@@ -102,56 +149,86 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* RESPONSIVE MENU PANEL */}
+        {/* FULL-SCREEN MENU OVERLAY */}
         {isMenuOpen && (
           <div
             ref={menuRef}
             className="
-              absolute
-              top-full
-              right-0
-              w-full lg:w-105
-              bg-white
-              shadow-xl
-              border-t lg:border
-              border-brand-cream-200
-              z-50
+              fixed inset-0 top-28 bg-white
+              lg:flex lg:items-center lg:justify-center
+              overflow-y-auto
+              z-40
             "
           >
-            <div className="px-6 py-6 space-y-6">
-
-              {navigationLinks.map(link => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
+            <div className="w-full max-w-4xl px-6 py-12">
+              
+              {/* Mobile: Simple links */}
+              <div className="lg:hidden space-y-4">
+                {navigationLinks.map(link => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="
+                      block
+                      text-brand-dark
+                      font-medium
+                      text-lg
+                      py-3
+                      hover:text-brand-teal
+                      transition-colors
+                    "
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                
+                {/* Mobile CTA button */}
+                <button
                   className="
-                    block
-                    text-brand-dark
-                    font-medium
-                    text-lg
-                    hover:text-brand-teal
+                    w-full
+                    bg-brand-lilac hover:bg-brand-lilac-700
+                    text-white font-semibold
+                    py-4 rounded-full
                     transition-colors
+                    mt-6
                   "
                 >
-                  {link.name}
-                </Link>
-              ))}
+                  SEED A COOPERATIVE
+                </button>
+              </div>
 
-              {/* Mobile only CTA button */}
-              <button
-                className="
-                  lg:hidden
-                  w-full
-                  bg-brand-lilac hover:bg-brand-lilac-700
-                  text-white font-semibold
-                  py-4 rounded-full
-                  transition-colors
-                "
-              >
-                SEED A COOPERATIVE
-              </button>
-
+              {/* Desktop: Categorized navigation */}
+              <div className="hidden lg:grid lg:grid-cols-3 gap-12">
+                {menuCategories.map((category, index) => (
+                  <div key={index} className="space-y-6">
+                    <div className="flex items-center gap-3 text-brand-dark font-semibold text-xl">
+                      {category.icon}
+                      <span>{category.title}</span>
+                    </div>
+                    <div className="space-y-4">
+                      {category.items.map((item, itemIndex) => (
+                        <Link
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="
+                            block
+                            text-brand-dark
+                            font-medium
+                            text-lg
+                            py-2
+                            hover:text-brand-teal
+                            transition-colors
+                          "
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
