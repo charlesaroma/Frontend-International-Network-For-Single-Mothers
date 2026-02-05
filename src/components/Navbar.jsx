@@ -182,7 +182,7 @@ const Navbar = () => {
                 <div key={index} className="border-b border-gray-200 last:border-0">
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full flex items-center justify-between py-6 group hover:bg-gray-50 transition-colors px-4 rounded-lg"
+                    className="w-full flex items-center justify-between py-6 group hover:bg-gray-50 transition-colors px-4 rounded-lg cursor-pointer"
                   >
                     <span className="text-2xl md:text-3xl text-brand-dark font-normal">
                       {category.title}
@@ -210,7 +210,7 @@ const Navbar = () => {
                           key={idx}
                           to={item.path}
                           onClick={() => setIsMenuOpen(false)}
-                          className="block text-lg text-brand-dark-400 hover:text-brand-lilac pl-4 border-l-2 border-transparent hover:border-brand-lilac transition-all"
+                          className="block text-lg text-brand-dark-400 hover:text-brand-lilac pl-4 border-l-2 border-transparent hover:border-brand-lilac transition-all cursor-pointer"
                         >
                           {item.name}
                         </Link>

@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const HomeHero = () => {
   return (
     <div 
-      className="relative w-full h-[calc(120vh-6rem)] bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full h-[calc(110vh-6rem)] bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: 'url("https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/Bg.png")'
       }}
     >
       {/* Right Side Glass Panel */}
       <div 
-        className="absolute bottom-0 right-0 lg:right-[10%] w-full md:w-[40%] lg:w-[28%] h-full flex flex-col justify-center px-8 md:px-12 lg:px-12"
+        className="absolute bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none"
         style={{
           background: 'rgba(245, 245, 221, 0.12)', // #F5F5DD1F
           backdropFilter: 'blur(8px)',

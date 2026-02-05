@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-cream-100 w-full py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-64 mb-16">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-64 mb-16">
           
           {/* LEFT: Logo + Description */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 max-w-xl">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM: Contact & Copyright */}
-        <div className="flex flex-col items-start gap-1 text-base text-brand-cream-800 font-semibold font-secondary max-w-3xl">
+        <div className="flex flex-col items-center md:items-start gap-1 text-base text-center md:text-left text-brand-cream-800 font-semibold font-secondary max-w-3xl">
           <p>
             If you need assistance with your donation, please call us at 000000000 or <br/> contact us through our{' '}
             <a href="mailto:official@insmuganda.org" className="text-brand-lilac-700 border-b border-brand-lilac-700 hover:text-brand-lilac-900 transition-colors">
