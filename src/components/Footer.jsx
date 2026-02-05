@@ -3,86 +3,54 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-cream text-brand-dark">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-between items-start">
-          {/* Left Section: Logo and Description */}
-          <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
-            <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="INSM Uganda Logo" 
-                className="h-16 w-16 object-contain"
-              />
+    <footer className="bg-brand-cream-100 w-full py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-64 mb-16">
+          
+          {/* LEFT: Logo + Description */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 max-w-xl">
+            <div className="shrink-0 bg-white rounded-full p-1 shadow-sm">
+               <img 
+                 src="/logo.png" 
+                 alt="INSM Uganda Logo"
+                 className="w-54 h-54 object-contain rounded-full"
+               />
             </div>
-            <h3 className="font-semibold text-lg mb-2">
-              International Network for Single Mothers<br />
-              Uganda Chapter
-            </h3>
-            <p className="text-sm leading-relaxed max-w-md">
-              We empower mothers become an economic force in Uganda. We are committed to radical transparency 
-              and the economic dignity of every home.
-            </p>
+            <div className="text-center md:text-left pt-2">
+              <p className="font-secondary font-semibold text-brand-cream-800 text-lg leading-relaxed">
+                International Network for <br/> Single Mothers Uganda Chapter <br/> empowers mothers become an <br/> economic force in Uganda.<br/> We are committed to radical <br/> transparency and the economic <br/> dignity of every home.
+              </p>
+            </div>
           </div>
 
-          {/* Right Section: Navigation Links */}
-          <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
-            <ul className="text-lg font-semibold space-y-2">
-              <li>
-                <Link 
-                  to="/about" 
-                  className="hover:text-brand-teal transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="hover:text-brand-teal transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/give" 
-                  className="hover:text-brand-teal transition-colors"
-                >
-                  Ways to Give
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/privacy" 
-                  className="hover:text-brand-teal transition-colors"
-                >
-                  Privacy Policy & Terms of Use
-                </Link>
-              </li>
-            </ul>
+          {/* RIGHT: Navigation Links */}
+          <div className="flex flex-col space-y-4 pt-2 items-center md:items-start w-full md:w-auto">
+            <Link to="/about" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+              About Us
+            </Link>
+            <Link to="/contact" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+              Contact Us
+            </Link>
+            <Link to="/give" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+              Ways to Give
+            </Link>
+            <Link to="/privacy" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+              Privacy Policy & <br/> Terms of Use
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Section: Contact and Copyright */}
-        <div className="border-t border-brand-dark-200 mt-8 pt-6">
-          <div className="text-sm text-center space-y-2">
-            <p>
-              If you need assistance with your donation, please call us at{' '}
-              <a href="tel:000000000" className="text-brand-teal hover:underline font-medium">
-                000000000
-              </a>
-              {' '}or contact us through our{' '}
-              <a href="mailto:official@insmuganda.org" className="text-brand-teal hover:underline font-medium">
-                official email
-              </a>
-              .
-            </p>
-            <p>
-              International Network for Single Mothers Uganda Chapter is a not-for-profit organization. 
-              © 2026 INSM Uganda. All Rights Reserved.
-            </p>
-          </div>
+        {/* BOTTOM: Contact & Copyright */}
+        <div className="flex flex-col items-start gap-1 text-base text-brand-cream-800 font-semibold font-secondary max-w-3xl">
+          <p>
+            If you need assistance with your donation, please call us at 000000000 or <br/> contact us through our{' '}
+            <a href="mailto:official@insmuganda.org" className="text-brand-lilac-700 border-b border-brand-lilac-700 hover:text-brand-lilac-900 transition-colors">
+              official email
+            </a>.
+          </p>
+          <p>
+            International Network for Single Mothers Uganda Chapter is a not-for-profit <br/> organization. © 2026 INSM Uganda. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
