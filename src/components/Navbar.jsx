@@ -170,11 +170,11 @@ const Navbar = () => {
      {/* MENU OVERLAY */}
      {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-white z-40 pt-32 overflow-y-auto"
+          className="fixed inset-0 bg-white z-40 pt-24 overflow-y-auto"
           ref={menuRef}
         >
           {/* Header Separation Line */}
-          <div className="absolute top-28 left-0 w-full border-b border-gray-100"></div>
+          <div className="absolute top-20 left-0 w-full border-b border-gray-100"></div>
 
           <div className="max-w-3xl mx-auto px-4 md:px-8 py-8">
             <div className="flex flex-col">
