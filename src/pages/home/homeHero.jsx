@@ -6,7 +6,7 @@ const EXTRACTED_IMAGE = "https://ik.imagekit.io/sbgenu6wj/Internation%20Network%
 
 const HomeHero = () => {
   // Shared styles for the panel positioning
-  const panelPositionClasses = "absolute bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[12%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none";
+  const panelPositionClasses = "absolute bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none";
 
   // Content component to ensure identical layout in both layers
   const PanelContent = ({ visibleContent }) => (
@@ -26,11 +26,11 @@ const HomeHero = () => {
       
       <Link 
         to="/join"
-        className={`inline-flex items-center justify-center text-sm md:text-base font-bold text-white transition-all duration-300 transform hover:scale-105 mt-2 md:mt-6 lg:mt-10 ${visibleContent === 'text' ? 'invisible' : 'pointer-events-auto'}`}
+        className={`inline-flex items-center justify-center text-lg md:text-base font-bold text-white transition-all duration-300 transform hover:scale-105 mt-4 md:mt-8 lg:mt-14 ${visibleContent === 'text' ? 'invisible' : 'pointer-events-auto'}`}
         style={{
           background: '#7AA0A3',
           borderRadius: '99px',
-          padding: '14px 28px',
+          padding: '14px 48px',
           whiteSpace: 'nowrap'
         }}
       >
@@ -43,7 +43,7 @@ const HomeHero = () => {
     <div className="relative w-full h-[calc(110vh-6rem)] overflow-hidden">
       
       {/* Layer 0: Background Gradient (Behind everything) */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-brand-lilac-600 to-brand-pink-300"></div>
+      <div className="absolute inset-0 z-0 bg-linear-to-br from-brand-lilac-600 to-brand-pink-300"></div>
 
       {/* Layer 1: Main Background (All the way behind) */}
       <div className="absolute inset-0 z-10">
