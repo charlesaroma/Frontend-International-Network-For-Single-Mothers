@@ -25,16 +25,16 @@ const Footer = () => {
 
           {/* RIGHT: Navigation Links */}
           <div className="flex flex-col space-y-4 pt-2 items-center md:items-start w-full md:w-auto">
-            <Link to="/about" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+            <Link to="/our-story" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
               About Us
             </Link>
-            <Link to="/contact" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+            <Link to="/contact-us" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
               Contact Us
             </Link>
-            <Link to="/give" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+            <Link to="/seed-a-cooperative" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
               Ways to Give
             </Link>
-            <Link to="/privacy" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
+            <Link to="/privacy-policy" className="font-primary font-bold text-xl text-brand-teal-700 hover:text-brand-teal-900 transition-colors">
               Privacy Policy & <br/> Terms of Use
             </Link>
           </div>

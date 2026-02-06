@@ -1,17 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const BG_IMAGE = "https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/Bg.png?updatedAt=1770239384463";
+const EXTRACTED_IMAGE = "https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/Bg.png?updatedAt=1770239384463";
+
 const HomeHero = () => {
   return (
-    <div 
-      className="relative w-full h-[calc(110vh-6rem)] bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{
-        backgroundImage: 'url("https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/Bg.png")'
-      }}
-    >
-      {/* Right Side Glass Panel */}
+    <div className="relative w-full h-[calc(110vh-6rem)] overflow-hidden">
+      
+      {/* Layer 1: Main Background */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={BG_IMAGE} 
+          alt="Hero Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Layer 2: Glass Panel */}
       <div 
-        className="absolute bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none"
+        className="absolute z-10 bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none"
         style={{
           background: 'rgba(245, 245, 221, 0.12)', // #F5F5DD1F
           backdropFilter: 'blur(8px)',
@@ -45,6 +53,16 @@ const HomeHero = () => {
           </Link>
         </div>
       </div>
+
+       {/* Layer 3: Extracted Foreground Image */}
+       <div className="absolute inset-0 z-20 pointer-events-none">
+        <img 
+          src={EXTRACTED_IMAGE} 
+          alt="Hero Foreground" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
     </div>
   );
 };

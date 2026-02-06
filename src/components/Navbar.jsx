@@ -8,32 +8,28 @@ const Navbar = () => {
 
   const menuCategories = [
     {
-      title: 'Who we are',
+      title: 'Who we are?',
       items: [
-        { name: 'About Us', path: '/about' },
-        { name: 'Who We Are', path: '/about/who-we-are' },
-        { name: 'What We Do', path: '/about/what-we-do' },
-        { name: 'Our Team', path: '/team' },
-        { name: 'Our Story', path: '/story' },
+        { name: 'Our Story', path: '/our-story' },
+        { name: 'Our Team', path: '/our-team' },
+        { name: 'The Roadmap', path: '/the-roadmap' },
       ]
     },
     {
-      title: 'What we do',
+      title: 'What we do?',
       items: [
         { name: 'Programs', path: '/programs' },
-        { name: 'Initiatives', path: '/initiatives' },
-        { name: 'Impact', path: '/impact' },
         { name: 'Gallery', path: '/gallery' },
-        { name: 'News', path: '/news' },
+        { name: 'Blog', path: '/blog' },
       ]
     },
     {
-      title: 'How to help',
+      title: 'How to help?',
       items: [
-        { name: 'Donate', path: '/donate' },
-        { name: 'Volunteer', path: '/volunteer' },
-        { name: 'Partner', path: '/partner' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Seed a Cooperative', path: '/seed-a-cooperative' },
+        { name: 'Join the Assignment', path: '/join-the-assignment' },
+        { name: 'Equipper Portal', path: 'https://portal.insmuganda.org', external: true },
+        { name: 'Contact Us', path: '/contact-us' },
       ]
     }
   ]
@@ -114,21 +110,15 @@ const Navbar = () => {
                 </span>
               </h1>
             </div>
-             {/* Mobile Logo Text */}
-             <div className="sm:hidden">
-                <h1 className="font-bold text-sm uppercase leading-tight">
-                  <span className="text-brand-lilac">INSM</span>
-                  <br />
-                  <span className="text-brand-lilac-700">UGANDA</span>
-                </h1>
-              </div>
+
           </Link>
 
           {/* RIGHT SIDE ACTIONS */}
           <div className="flex items-center gap-6 z-50 relative">
 
             {/* CTA BUTTON */}
-            <button
+            <Link
+              to="/seed-a-cooperative"
               className="
                 hidden md:inline-flex
                 items-center justify-center
@@ -143,7 +133,7 @@ const Navbar = () => {
               style={{ minWidth: '200px', height: '54px' }}
             >
               SEED A COOPERATIVE
-            </button>
+            </Link>
 
             {/* TOGGLE BUTTON (BURGER / CLOSE) */}
             <button
@@ -220,6 +210,30 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Mobile Menu CTA */}
+            <div className="mt-8 px-4 md:hidden">
+              <Link
+                to="/seed-a-cooperative"
+                onClick={() => setIsMenuOpen(false)}
+                className="
+                  w-full md:w-auto
+                  items-center justify-center
+                  bg-brand-lilac hover:bg-brand-lilac-700
+                  text-white text-body font-semibold
+                  px-8 py-3
+                  rounded-full
+                  transition-colors
+                  cursor-pointer
+                  uppercase tracking-wide
+                  flex
+                "
+                style={{ height: '54px' }}
+              >
+                SEED A COOPERATIVE
+              </Link>
+            </div>
+
           </div>
         </div>
       )}
