@@ -6,7 +6,7 @@ const EXTRACTED_IMAGE = "https://ik.imagekit.io/sbgenu6wj/Internation%20Network%
 
 const HomeHero = () => {
   // Shared styles for the panel positioning
-  const panelPositionClasses = "absolute bottom-[10%] left-6 w-auto max-w-[90%] md:max-w-none h-auto md:h-full md:bottom-0 md:left-auto right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none";
+  const panelPositionClasses = "absolute bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-md md:left-auto md:translate-x-0 md:max-w-none h-auto md:h-full md:bottom-0 right-auto md:right-0 lg:right-[10%] md:w-[40%] lg:w-[28%] flex flex-col justify-center p-8 md:p-0 md:px-12 lg:px-12 rounded-3xl md:rounded-none";
 
   // Content component to ensure identical layout in both layers
   const PanelContent = ({ visibleContent }) => (
@@ -55,9 +55,9 @@ const HomeHero = () => {
       </div>
 
       {/* Layer 2: Glass Panel (Background + Text) */}
-      {/* This layer sits BETWEEN the BG images. It contains the text. */}
+      {/* On mobile: z-40 (In front of image). On desktop: z-20 (Behind image). */}
       <div 
-        className={`z-20 ${panelPositionClasses}`}
+        className={`z-40 md:z-20 ${panelPositionClasses}`}
         style={{
           background: 'rgba(245, 245, 221, 0.12)', // #F5F5DD1F
           backdropFilter: 'blur(8px)',
@@ -77,9 +77,8 @@ const HomeHero = () => {
       </div>
 
       {/* Layer 4: CTA Button */}
-      {/* This sits on top of the Extracted Image. 
-          We use the same layout container but transparent, and only show the button. */}
-      <div className={`z-40 pointer-events-none ${panelPositionClasses}`}>
+      {/* This sits on top of everything. */}
+      <div className={`z-50 md:z-40 pointer-events-none ${panelPositionClasses}`}>
         <PanelContent visibleContent="button" />
       </div>
 
