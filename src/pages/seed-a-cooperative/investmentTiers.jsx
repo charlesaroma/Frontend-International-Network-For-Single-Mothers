@@ -3,23 +3,45 @@ import React from 'react';
 const TIERS = [
   {
     title: "The First Thread",
+    subtitle: "From Invisible to Official",
     amount: "$10",
-    description: "Provides basic materials for a mother to start her journey."
+    description: "Provides a mother with her official Cooperative Passbook and first financial literacy induction.",
+    colorClass: "bg-brand-teal"
   },
   {
-    title: "The Weaver's Loom",
-    amount: "$50",
-    description: "Contributes to equipment and training for cooperative members."
-  },
-  {
-    title: "The Harvest Share",
+    title: "The Safety Rope",
+    subtitle: "From Conflict to Stability",
     amount: "$100",
-    description: "Supports market access and business development services."
+    description: "Funds a mental health and positive parenting seminar for 10 mothers, securing the future of their children.",
+    colorClass: "bg-brand-pink"
   },
   {
-    title: "Legacy Fund",
-    amount: "Custom",
-    description: "A substantial contribution to create lasting impact and systemic change."
+    title: "The Parish Seed",
+    subtitle: "From Isolation to Power",
+    amount: "$500",
+    description: "Seeds the registration and mobilization of a new 50-member Parish Cooperative.",
+    colorClass: "bg-brand-brown"
+  },
+  {
+    title: "The Masterclass",
+    subtitle: "From Resilience to a Pro",
+    amount: "$2,500",
+    description: "Funds a 4-week certification in Commercial Agriculture or Tourism for 100 women.",
+    colorClass: "bg-brand-brown"
+  },
+  {
+    title: "The SACCO Engine",
+    subtitle: "From Subsistence to Wealth",
+    amount: "$10,000",
+    description: "Provides the initial revolving credit fund to scale small businesses across an entire division.",
+    colorClass: "bg-brand-teal"
+  },
+  {
+    title: "The Legacy Fund",
+    subtitle: "Building the Republic",
+    amount: "$20,000+",
+    description: "Seeds the registration and mobilization of a new 50-member Parish Cooperative.",
+    colorClass: "bg-brand-pink"
   }
 ];
 
@@ -27,33 +49,44 @@ const InvestmentTiers = () => {
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold font-primary text-brand-teal-700 mb-4">
-            Tiered Investment Options
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-primary text-brand-dark-400">
+            Investment Tiers
           </h2>
-          <p className="text-lg font-secondary text-brand-dark-400 max-w-2xl mx-auto">
-            Choose a tier that resonates with you. Every contribution weaves a stronger fabric for our community.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {TIERS.map((tier, index) => (
             <div 
               key={index} 
-              className="bg-brand-cream-100 rounded-2xl p-8 border border-brand-teal-200 hover:shadow-lg transition-shadow flex flex-col items-center text-center group"
+              className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow p-6"
             >
-              <div className="w-20 h-20 bg-brand-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-teal-200 transition-colors">
-                <span className="text-2xl font-bold text-brand-teal-700">{tier.amount}</span>
+              {/* Header Section */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold font-primary text-black mb-1">
+                  {tier.title}
+                </h3>
+                <p className="text-sm font-bold text-gray-400 font-secondary uppercase tracking-wide">
+                  {tier.subtitle}
+                </p>
               </div>
-              <h3 className="text-xl font-bold font-primary text-brand-dark mb-3">
-                {tier.title}
-              </h3>
-              <p className="text-brand-dark-400 font-secondary leading-relaxed mb-8 flex-grow">
-                {tier.description}
-              </p>
-              <button className="w-full py-3 px-6 bg-brand-lilac text-white font-bold rounded-full hover:bg-brand-lilac-700 transition-colors">
-                Donate Now
-              </button>
+
+              {/* Color Block with Amount */}
+              <div className={`w-full h-48 ${tier.colorClass} flex items-center justify-center text-white`}>
+                <span className="text-5xl font-bold font-primary">{tier.amount}</span>
+              </div>
+
+              {/* Description & Action */}
+              <div className="flex flex-col grow mt-6">
+                <p className="text-brand-dark font-secondary leading-relaxed mb-8 grow">
+                  {tier.description}
+                </p>
+                <div className="flex justify-end mt-auto">
+                    <button className="bg-brand-lilac-600 text-white font-bold text-xs py-3 px-6 rounded-full hover:bg-brand-lilac-700 transition-colors uppercase tracking-wider">
+                    Give Seed
+                    </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
