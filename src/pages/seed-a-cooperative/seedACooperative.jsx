@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './donateHero'
+import Stats from './stats'
 import InvestmentTiers from './investmentTiers'
 import PathToProsperity from './pathToProsperity'
 
@@ -8,6 +9,7 @@ const SeedACooperative = () => {
   return (
     <div className=" pb-10 min-h-screen">
       <Hero />
+      <Stats />
       <InvestmentTiers />
       <PathToProsperity />
     </div>
