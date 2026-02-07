@@ -3,7 +3,7 @@ import React from 'react';
 const DonateHero = () => {
   return (
     <section 
-      className="relative w-full h-[600px] bg-cover bg-center flex items-end justify-center pb-20 overflow-hidden group"
+      className="relative w-full h-[600px] bg-cover bg-center flex items-end justify-center overflow-hidden group"
       style={{
         backgroundImage: `url("https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/donatebg.png?updatedAt=1770487650885")`
       }}
@@ -13,8 +13,8 @@ const DonateHero = () => {
       
       {/* Content with glass background */}
       <div className="relative z-10 w-full">
-        <div className="bg-white/60 backdrop-blur-md p-8 md:p-12 text-center w-full shadow-sm border border-white/50">
-          <h1 className="text-5xl md:text-7xl font-bold font-primary text-brand-dark mb-6 uppercase tracking-tight">
+        <div className="bg-white/60 backdrop-blur-md h-[340px] flex flex-col justify-center items-center p-8 md:p-12 text-center w-full shadow-sm border-t border-white/50">
+          <h1 className="text-4xl md:text-6xl font-bold font-primary text-brand-teal-900 mb-6 uppercase tracking-tight">
             Donate With <br className="hidden md:block" /> Dignity
           </h1>
           <p className="text-lg md:text-xl font-secondary text-brand-dark-400 max-w-3xl mx-auto leading-relaxed">
