@@ -7,7 +7,7 @@ import PathToProsperity from './pathToProsperity'
 
 const SeedACooperative = () => {
   return (
-    <div className=" pb-10 min-h-screen">
+    <div className="min-h-screen">
       <Hero />
       <Stats />
       <InvestmentTiers />
