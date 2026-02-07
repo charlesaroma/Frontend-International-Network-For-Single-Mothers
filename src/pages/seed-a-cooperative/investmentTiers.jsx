@@ -48,7 +48,7 @@ const TIERS = [
 const InvestmentTiers = () => {
   return (
     <section className="w-full py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-8 md:px-24">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-primary text-brand-dark-400">
             Investment Tiers
@@ -82,7 +82,7 @@ const InvestmentTiers = () => {
                   {tier.description}
                 </p>
                 <div className="flex justify-end mt-auto">
-                    <button className="bg-brand-lilac-600 text-white font-bold text-xs py-3 px-6 rounded-full hover:bg-brand-lilac-700 transition-colors uppercase tracking-wider">
+                    <button className="bg-brand-lilac-600 text-white font-bold text-xs py-3 px-6 rounded-full hover:bg-brand-lilac-700 transition-colors uppercase tracking-wider cursor-pointer">
                     Give Seed
                     </button>
                 </div>
