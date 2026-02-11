@@ -114,7 +114,7 @@ const Navbar = () => {
           </Link>
 
           {/* RIGHT SIDE ACTIONS */}
-          <div className="flex items-center gap-6 z-50 relative">
+          <div className="flex items-center gap-6 z-30 relative">
 
             {/* CTA BUTTON */}
             <Link
@@ -160,7 +160,7 @@ const Navbar = () => {
      {/* MENU OVERLAY */}
      {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-white z-40 pt-24 overflow-y-auto"
+          className="fixed inset-0 bg-white z-45 pt-24 overflow-y-auto"
           ref={menuRef}
         >
           {/* Header Separation Line */}
