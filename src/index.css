@@ -64,6 +64,10 @@
   --dark-200: #cecece;
   --dark-300: #9d9d9e;
   --dark-400: #6b6c6d;
+
+  /* Partner – PesaPal brand */
+  --pesapal-blue: #1a6dab;
+  --pesapal-red: #e22d2d;
 }
 
 @import "tailwindcss";
@@ -129,6 +133,9 @@
   --color-brand-dark-200: var(--dark-200);
   --color-brand-dark-300: var(--dark-300);
   --color-brand-dark-400: var(--dark-400);
+
+  --color-pesapal-blue: var(--pesapal-blue);
+  --color-pesapal-red: var(--pesapal-red);
 
   /* Typography scale – utilities: text-display, text-h1 … text-body (sensible rem) */
   --text-display: 3rem;

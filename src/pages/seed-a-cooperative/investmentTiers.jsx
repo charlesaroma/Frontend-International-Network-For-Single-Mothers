@@ -45,7 +45,7 @@ const TIERS = [
   }
 ];
 
-const InvestmentTiers = () => {
+const InvestmentTiers = ({ onDonateClick }) => {
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-8 md:px-24">
@@ -82,7 +82,10 @@ const InvestmentTiers = () => {
                   {tier.description}
                 </p>
                 <div className="flex justify-end mt-auto">
-                    <button className="bg-brand-lilac-600 text-white font-bold text-xs py-3 px-6 rounded-full hover:bg-brand-lilac-700 transition-colors uppercase tracking-wider cursor-pointer">
+                    <button 
+                      onClick={() => onDonateClick && onDonateClick(tier)}
+                      className="bg-brand-lilac-600 text-white font-bold text-xs py-3 px-6 rounded-full hover:bg-brand-lilac-700 transition-colors uppercase tracking-wider cursor-pointer"
+                    >
                     Give Seed
                     </button>
                 </div>
