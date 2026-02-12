@@ -19,7 +19,7 @@ import Programs from './pages/what-we-do/Programs';
 import Gallery from './pages/what-we-do/Gallery';
 import Blog from './pages/what-we-do/Blog';
 import SeedACooperative from './pages/seed-a-cooperative/seedACooperative';
-import JoinTheAssignment from './pages/how-to-help/JoinTheAssignment';
+import HowToHelp from './pages/how-to-help/howToHelp';
 import ContactUs from './pages/how-to-help/ContactUs';
 import PrivacyPolicyTermsOfUse from './pages/privacy-policy/privacyPolicy-TermsOfUse';
 
@@ -46,7 +46,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/seed-a-cooperative" element={<SeedACooperative />} />
-            <Route path="/join-the-assignment" element={<JoinTheAssignment />} />
+            <Route path="/how-to-help" element={<HowToHelp />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyTermsOfUse />} />
           </Routes>

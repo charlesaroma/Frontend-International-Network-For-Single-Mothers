@@ -86,7 +86,7 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
         {/* Close button — top-right of viewport */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 z-[60] text-brand-cream-100 hover:opacity-70 transition-opacity cursor-pointer"
+          className="absolute top-6 right-6 z-60 text-brand-cream-100 hover:opacity-70 transition-opacity cursor-pointer"
           aria-label="Close modal"
         >
           <svg
@@ -106,7 +106,7 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
         </button>
 
         {/* ── CONTENT — cards + security links on the same line ── */}
-        <div className="relative z-[55] w-full max-w-[1200px] flex flex-col md:flex-row items-end justify-center gap-6">
+        <div className="relative z-55 w-full max-w-[1200px] flex flex-col md:flex-row items-end justify-center gap-6">
           {/* Two cards side by side */}
           <div className="flex flex-col md:flex-row gap-6 items-stretch">
             <CampaignCard tier={tier} />
