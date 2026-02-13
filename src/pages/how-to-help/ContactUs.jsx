@@ -16,12 +16,11 @@ const ContactUs = () => {
         {/* Content with glass background */}
         <div className="relative z-10 w-full">
           <div className="bg-white/60 backdrop-blur-md h-auto md:h-[340px] flex flex-col justify-center items-center p-6 md:p-12 text-center w-full shadow-sm border-t border-white/50">
-            <h1 className="text-3xl md:text-6xl font-bold font-primary text-brand-dark mb-4 md:mb-6 uppercase tracking-tight">
-              WE'RE HERE TO HELP
+            <h1 className="text-4xl md:text-6xl font-bold font-primary text-brand-dark uppercase tracking-tight leading-none">
+              WE'RE HERE
+              <br />
+              TO HELP
             </h1>
-            <p className="text-base md:text-xl font-secondary text-brand-dark-400 max-w-3xl mx-auto leading-relaxed">
-              Direct lines for regional mobilization and technical support.
-            </p>
           </div>
         </div>
       </section>
