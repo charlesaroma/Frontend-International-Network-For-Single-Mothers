@@ -22,14 +22,14 @@ const Partners = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-20 md:mb-32">
           {/* Image container with curved left side – head overflows top */}
           <div className="relative w-[280px] sm:w-[320px] md:w-[360px] h-[360px] sm:h-[400px] md:h-[430px] shrink-0">
-            {/* D-shaped colored background – sits at the bottom */}
-            <div className="absolute bottom-0 left-0 w-full h-[300px] sm:h-[340px] md:h-[360px] bg-brand-lilac-200 rounded-tl-[180px] rounded-bl-[180px] rounded-tr-none rounded-br-none" />
-            {/* Person image – anchored to bottom, extends above the D-shape */}
-            <img
-              src="https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/technical.png"
-              alt="Technical Mentor – a professional in a white doctor's coat"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-full object-contain object-bottom"
-            />
+            {/* D-shaped colored background – sits at the bottom (clips image) */}
+            <div className="absolute bottom-0 left-0 w-full h-[300px] sm:h-[340px] md:h-[360px] bg-brand-lilac-200 rounded-tl-[180px] rounded-bl-[180px] rounded-tr-none rounded-br-none overflow-hidden">
+              <img
+                src="https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/technical.png"
+                alt="Technical Mentor – a professional in a white doctor's coat"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-full object-contain object-bottom"
+              />
+            </div>
           </div>
 
           {/* Text content */}
