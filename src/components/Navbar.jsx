@@ -27,7 +27,7 @@ const Navbar = () => {
       title: 'How to help?',
       items: [
         { name: 'Seed a Cooperative', path: '/seed-a-cooperative' },
-        { name: 'Join the Assignment', path: '/join-the-assignment' },
+        { name: 'Join the Assignment', path: '/how-to-help' },
         { name: 'Equipper Portal', path: 'https://portal.insmuganda.org', external: true },
         { name: 'Contact Us', path: '/contact-us' },
       ]
@@ -83,7 +83,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className={`sticky top-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-white/30 backdrop-blur-lg backdrop-saturate-150 shadow-sm border-white/20' : 'bg-white shadow-sm border-transparent'}`}>
+    <nav className={`sticky top-0 z-80 transition-all duration-500 border-b ${isScrolled ? 'bg-white/30 backdrop-blur-lg backdrop-saturate-150 shadow-sm border-white/20' : 'bg-white shadow-sm border-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4">
 
         {/* NAV BAR HEADER */}
@@ -160,7 +160,7 @@ const Navbar = () => {
      {/* MENU OVERLAY */}
      {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-white z-45 pt-24 overflow-y-auto"
+          className="fixed inset-0 bg-white z-[60] pt-24 overflow-y-auto"
           ref={menuRef}
         >
           {/* Header Separation Line */}

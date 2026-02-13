@@ -25,7 +25,7 @@ const HomeHero = () => {
       </div>
       
       <Link 
-        to="/join"
+        to="/how-to-help"
         className={`inline-flex items-center justify-center text-lg md:text-base font-bold text-white transition-all duration-300 transform hover:scale-105 mt-4 md:mt-8 lg:mt-14 ${visibleContent === 'text' ? 'invisible' : 'pointer-events-auto'}`}
         style={{
           background: '#7AA0A3',
@@ -40,7 +40,7 @@ const HomeHero = () => {
   );
 
   return (
-    <div className="relative w-full h-[calc(110vh-6rem)] overflow-hidden">
+    <div className="relative w-full h-[85vh] md:h-[90vh] lg:h-[calc(110vh-6rem)] overflow-hidden">
       
       {/* Layer 0: Background Gradient (Behind everything) */}
       <div className="absolute inset-0 z-0 bg-linear-to-br from-brand-lilac-600 to-brand-pink-300"></div>
