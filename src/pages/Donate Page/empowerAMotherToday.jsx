@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const EmpowerAMotherToday = ({ onDonateClick }) => {
   return (
     <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-            backgroundImage: `url("https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/24d67f7bedf75fdebe204784ab41ceb9f7e96699.png")`
+          backgroundImage: `url("https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/24d67f7bedf75fdebe204784ab41ceb9f7e96699.png")`,
         }}
       ></div>
 
       {/* Color Overlay #7F4829 with 85% opacity */}
-      <div 
+      <div
         className="absolute inset-0 mix-blend-multiply"
-        style={{ backgroundColor: '#7F4829', opacity: 0.9 }} 
+        style={{ backgroundColor: "#7F4829", opacity: 0.9 }}
       ></div>
 
       {/* Content */}
@@ -23,12 +23,14 @@ const EmpowerAMotherToday = ({ onDonateClick }) => {
           Ready to Power the Movement?
         </h2>
         <p className="text-base md:text-xl font-secondary leading-relaxed mb-10 opacity-95 max-w-3xl mx-auto font-light">
-          Join thousands of investors seeding a future of self-reliance for Uganda’s single mothers. Your capital builds the infrastructure of freedom.
+          Join thousands of investors seeding a future of self-reliance for
+          Uganda’s single mothers. Your capital builds the infrastructure of
+          freedom.
         </p>
-        
-        <button 
+
+        <button
           onClick={onDonateClick}
-          className="bg-[#E5DAD4] text-[#7F4829] font-bold text-xs md:text-sm py-4 px-8 rounded-full hover:bg-white transition-all transform hover:scale-105 uppercase tracking-widest shadow-lg"
+          className="bg-[#E5DAD4] text-[#7F4829] font-bold text-xs md:text-sm py-4 px-8 rounded-full cursor-pointer hover:bg-white transition-all transform hover:scale-105 uppercase tracking-widest shadow-lg"
         >
           Empower A Mother Today
         </button>

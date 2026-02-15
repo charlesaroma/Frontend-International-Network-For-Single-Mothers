@@ -24,7 +24,7 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
     if (isOpen) {
       setStep("donation");
       setFrequency("once");
-      if (tier?.amount && !tier.amount.includes("+")) {
+      if (tier?.amount) {
         setSelectedAmount(tier.amount.replace(/[^0-9]/g, ""));
         setCustomAmount("");
       } else {
@@ -34,23 +34,12 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
     }
   }, [isOpen, tier]);
 
-  /* Lock body scroll (robust for mobile) */
+  /* ── Lock body scroll ── */
   useEffect(() => {
-    if (isOpen) {
-      const scrollY = window.scrollY;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
-      document.body.style.overflow = "hidden";
-
-      return () => {
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.width = "";
-        document.body.style.overflow = "";
-        window.scrollTo(0, scrollY);
-      };
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   /* ── ESC key closes modal ── */
@@ -117,13 +106,16 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
         </button>
 
         {/* ── CONTENT — cards + security links ── */}
-        <div className="relative z-55 min-h-screen md:min-h-0 flex items-start md:items-center justify-center p-4 py-14 md:p-8">
+        <div className="relative z-55 min-h-screen flex items-center justify-center p-3 py-12 md:p-8">
           <div className="w-full max-w-[1200px] flex flex-col md:flex-row items-stretch md:items-end justify-center gap-4 md:gap-6">
-            {/* Two cards side by side */}
+            {/* Two cards side by side — CampaignCard hidden on mobile */}
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
-              <CampaignCard tier={tier} />
+              <div className="hidden md:flex">
+                <CampaignCard tier={tier} />
+              </div>
 
               <DonationPanel
+                tier={tier}
                 frequency={frequency}
                 setFrequency={setFrequency}
                 selectedAmount={selectedAmount}
