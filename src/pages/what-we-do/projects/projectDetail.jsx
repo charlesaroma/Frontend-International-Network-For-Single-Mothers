@@ -168,7 +168,7 @@ const ProjectDetail = () => {
       <section className="py-8 md:py-10">
         <div className="max-w-5xl mx-auto px-6 md:px-24">
           <h2 className="text-2xl md:text-3xl font-bold font-primary text-brand-dark mb-6">
-            Programs Story
+            Project Story
           </h2>
 
           {/* Story text */}
