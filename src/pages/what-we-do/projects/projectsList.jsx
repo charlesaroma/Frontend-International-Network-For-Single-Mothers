@@ -113,7 +113,7 @@ const projectsList = () => {
           </div>
 
           {/* Sidebar Filters */}
-          <div className="w-full lg:w-[240px] shrink-0">
+          <div className="w-full lg:w-[240px] shrink-0 order-first lg:order-last">
             {/* Category */}
             <div className="mb-6">
               <button
