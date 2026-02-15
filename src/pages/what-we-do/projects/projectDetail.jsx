@@ -256,7 +256,7 @@ const ProjectDetail = () => {
           SECTION 3 — SUPPORT THIS INITIATIVE
       ═══════════════════════════════════════════ */}
       <section className="pb-20 md:pb-28 py-8 md:py-10">
-        <div className="max-w-5xl mx-auto px- md:px-24">
+        <div className="max-w-5xl mx-auto px-6 md:px-24">
           <h2 className="text-2xl md:text-3xl font-bold font-primary text-brand-dark mb-3">
             Support this Initiative
           </h2>
