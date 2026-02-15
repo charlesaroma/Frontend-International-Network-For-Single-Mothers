@@ -44,9 +44,9 @@ const DonationPanel = ({
   finalAmount,
 }) => {
   return (
-    <div className="w-full md:max-w-[400px] bg-brand-cream-100 rounded-xl shadow-lg p-8 md:p-10 flex flex-col overflow-y-auto">
+    <div className="w-full md:max-w-[400px] bg-brand-cream-100 rounded-xl shadow-lg p-5 md:p-8 flex flex-col overflow-y-auto max-h-[75vh] md:max-h-[600px]">
       {step === "donation" ? (
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-4 md:space-y-6">
           {/* Title */}
           <h2 className="text-2xl font-bold font-primary text-brand-dark text-center">
             Empower A Mother Today

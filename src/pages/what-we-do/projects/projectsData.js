@@ -8,7 +8,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=400&fit=crop",
     capitalRaised: "$ 21,400",
     category: "Community Programs",
-    status: "Active",
+    subcategory: "Fashion & Wearables",
+    status: "Fully Funded",
+    createdAt: "2025-06-15",
   },
   {
     id: 2,
@@ -19,7 +21,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
     capitalRaised: "$ 0",
     category: "Agriculture & Food",
-    status: "Active",
+    subcategory: "Land",
+    status: "Upcoming",
+    createdAt: "2026-01-10",
   },
   {
     id: 3,
@@ -30,7 +34,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop",
     capitalRaised: "$ 0",
     category: "Agriculture & Food",
-    status: "Active",
+    subcategory: "Dairy & Poultry business",
+    status: "Upcoming",
+    createdAt: "2026-02-01",
   },
   {
     id: 4,
@@ -41,7 +47,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1589758438368-0ad531db3366?w=600&h=400&fit=crop",
     capitalRaised: "$ 14,200",
     category: "Community Programs",
-    status: "Active",
+    subcategory: "Local Businesses",
+    status: "Fully Funded",
+    createdAt: "2025-03-20",
   },
   {
     id: 5,
@@ -52,7 +60,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1504545102780-26774c1bb073?w=600&h=400&fit=crop",
     capitalRaised: "$ 8,750",
     category: "Agriculture & Food",
-    status: "Active",
+    subcategory: "Other farming projects",
+    status: "Upcoming",
+    createdAt: "2026-01-25",
   },
   {
     id: 6,
@@ -63,7 +73,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&h=400&fit=crop",
     capitalRaised: "$ 6,300",
     category: "Community Programs",
-    status: "Active",
+    subcategory: "Other Projects",
+    status: "Upcoming",
+    createdAt: "2025-11-05",
   },
   {
     id: 7,
@@ -74,7 +86,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
     capitalRaised: "$ 32,000",
     category: "Agriculture & Food",
+    subcategory: "Land",
     status: "Completed",
+    createdAt: "2024-08-12",
   },
   {
     id: 8,
@@ -85,7 +99,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop",
     capitalRaised: "$ 11,800",
     category: "Community Programs",
+    subcategory: "Local Businesses",
     status: "Completed",
+    createdAt: "2024-05-30",
   },
   {
     id: 9,
@@ -96,7 +112,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1631209121750-a9f656d30a5c?w=600&h=400&fit=crop",
     capitalRaised: "$ 0",
     category: "Agriculture & Food",
-    status: "Active",
+    subcategory: "Food market",
+    status: "Upcoming",
+    createdAt: "2026-02-10",
   },
   {
     id: 10,
@@ -107,7 +125,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop",
     capitalRaised: "$ 19,500",
     category: "Community Programs",
-    status: "Active",
+    subcategory: "Other Projects",
+    status: "Fully Funded",
+    createdAt: "2025-09-18",
   },
   {
     id: 11,
@@ -118,7 +138,9 @@ const projectsData = [
       "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop",
     capitalRaised: "$ 4,900",
     category: "Agriculture & Food",
+    subcategory: "Other farming projects",
     status: "Completed",
+    createdAt: "2024-12-01",
   },
 ];
 
