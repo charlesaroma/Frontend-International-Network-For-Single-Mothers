@@ -34,12 +34,23 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
     }
   }, [isOpen, tier]);
 
-  /* ── Lock body scroll ── */
+  /* Lock body scroll (robust for mobile) */
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+
+      return () => {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      };
+    }
   }, [isOpen]);
 
   /* ── ESC key closes modal ── */
