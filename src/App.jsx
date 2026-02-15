@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // Pages
-// Pages
 import Home from "./pages/home/home";
 import HomeHero from "./pages/home/homeHero";
 import Login from "./pages/auth/login";
@@ -15,7 +14,7 @@ import Dashboard from "./pages/dashboard/dashboardPage";
 import OurStory from "./pages/who-we-are/OurStory";
 import OurTeam from "./pages/who-we-are/OurTeam";
 import TheRoadmap from "./pages/who-we-are/TheRoadmap";
-import Projects from "./pages/what-we-do/projects";
+import Projects from "./pages/what-we-do/projects/projectsPage";
 import Gallery from "./pages/what-we-do/Gallery";
 import Blog from "./pages/what-we-do/Blog";
 import DonatePage from "./pages/Donate Page/donatePage";

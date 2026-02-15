@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Stats = () => {
+const donateStats = () => {
   const stats = [
     { value: '17,482', label: 'MOTHERS REGISTERED' },
     { value: '30', label: 'PARISHES ACTIVATED' },
@@ -28,4 +28,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default donateStats;
