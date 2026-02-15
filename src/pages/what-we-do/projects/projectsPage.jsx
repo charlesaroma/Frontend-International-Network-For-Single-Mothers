@@ -2,7 +2,7 @@ import React from "react";
 import Projects from "./projectsHero";
 import Stats from "./projectStats";
 import Funds from "./projectFunds";
-import Sponsorship from "./projectSponsership";
+import Sponsorship from "./projectSponsorship";
 
 const whatWeDo = () => {
   return (

@@ -1,33 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import projectsData from "./projectsData";
 
 const projectSponsorship = () => {
-  const projects = [
-    {
-      title: "Commercial Tailoring Hub",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec elit ornare purus",
-      image:
-        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=400&fit=crop",
-      capitalRaised: "$ 21,400",
-    },
-    {
-      title: "Forage sorghum project",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec elit ornare purus .",
-      image:
-        "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
-      capitalRaised: "$ 0",
-    },
-    {
-      title: "Hatchery initiative in Makindye",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec elit ornare purus",
-      image:
-        "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop",
-      capitalRaised: "$ 0",
-    },
-  ];
+  const projects = projectsData.slice(0, 3);
 
   return (
     <section className="bg-brand-cream-100 py-20">
@@ -86,7 +62,7 @@ const projectSponsorship = () => {
         {/* View More Projects */}
         <div className="flex justify-center mt-12">
           <Link
-            to="/projects"
+            to="/projects/list"
             className="inline-flex items-center gap-2 text-base font-secondary text-brand-dark-400 hover:text-brand-dark transition-colors group"
           >
             View more projects
