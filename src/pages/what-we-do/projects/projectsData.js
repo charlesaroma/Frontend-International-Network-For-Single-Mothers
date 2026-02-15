@@ -14,6 +14,10 @@ const projectsData = [
     location: "Nakawa Division",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Sed sit amet ipsum mauris.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra. Sed in tortor vel ipsum ornare blandit. Aliquam erat volutpat. Nulla facilisi. Proin eget tortor risus.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum. Duis sollicitudin efficitur mauris nec sodales. In vulputate posuere metus ut tincidunt. Sed in elit luctus, tincidunt orci congue, fringilla turpis. Nullam pretium nulla vitae fermentum iaculis.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla. Aenean ut ligula pellentesque, porttitor lectus a, porta nisi. Mauris eget diam eu felis lobortis laoreet. Curabitur mattis massa et nisi cursus, eget auctor dui luctus. Aenean eget tempor orci, in sodales risus.",
+    storyImage:
+      "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 57,
       saccosFunded: 6,
@@ -40,6 +44,10 @@ const projectsData = [
     location: "Luwero District",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra. Sed in tortor vel ipsum ornare blandit.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum. Duis sollicitudin efficitur mauris nec sodales.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla.",
+    storyImage:
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 34,
       saccosFunded: 2,
@@ -66,6 +74,10 @@ const projectsData = [
     location: "Makindye Division",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla. Aenean ut ligula pellentesque, porttitor lectus a, porta nisi.",
+    storyImage:
+      "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 0,
       saccosFunded: 0,
@@ -92,6 +104,10 @@ const projectsData = [
     location: "Rubaga Division",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra. Sed in tortor vel ipsum ornare blandit. Aliquam erat volutpat.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum.",
+    storyImage:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 120,
       saccosFunded: 8,
@@ -118,6 +134,10 @@ const projectsData = [
     location: "Mukono District",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla.",
+    storyImage:
+      "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 22,
       saccosFunded: 3,
@@ -144,6 +164,10 @@ const projectsData = [
     location: "Kampala Central",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla.",
+    storyImage:
+      "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 45,
       saccosFunded: 4,
@@ -170,6 +194,10 @@ const projectsData = [
     location: "Wakiso District",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra. Sed in tortor vel ipsum ornare blandit.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum.",
+    storyImage:
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 89,
       saccosFunded: 10,
@@ -196,6 +224,10 @@ const projectsData = [
     location: "Kawempe Division",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla.",
+    storyImage:
+      "https://images.unsplash.com/photo-1486427944781-dbf45f4823fe?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 63,
       saccosFunded: 5,
@@ -222,6 +254,10 @@ const projectsData = [
     location: "Bundibugyo District",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum.",
+    storyImage:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 0,
       saccosFunded: 0,
@@ -248,6 +284,10 @@ const projectsData = [
     location: "Entebbe Municipality",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst. Curabitur sit amet erat quis risus feugiat viverra. Sed in tortor vel ipsum ornare blandit. Aliquam erat volutpat.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta, at finibus risus fermentum.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum. Aliquam condimentum libero eget condimentum fringilla.",
+    storyImage:
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 150,
       saccosFunded: 7,
@@ -274,6 +314,10 @@ const projectsData = [
     location: "Jinja District",
     story:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\n\nSuspendisse potenti. Sed dignissim lacus nec tortor luctus, id blandit nisi finibus. In hac habitasse platea dictumst.",
+    extendedStory:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vulputate risus. Sed id sem nulla. Suspendisse placerat turpis tempus tellus porta.\n\nNunc volutpat tellus vitae mauris malesuada volutpat. Cras efficitur erat vel erat faucibus dictum.",
+    storyImage:
+      "https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?w=600&h=400&fit=crop",
     stats: {
       mothersEmpowered: 38,
       saccosFunded: 3,

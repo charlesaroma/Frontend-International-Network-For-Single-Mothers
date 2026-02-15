@@ -157,10 +157,15 @@ const ProjectDetail = () => {
         </div>
       </section>
 
+      {/* Horizontal divider below hero */}
+      <div className="max-w-7xl mx-auto px-6 md:px-24 py-6 md:py-8">
+        <hr className="border-t border-brand-dark-200/30" />
+      </div>
+
       {/* ═══════════════════════════════════════════
           SECTION 2 — PROGRAMS STORY
       ═══════════════════════════════════════════ */}
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-10">
         <div className="max-w-5xl mx-auto px-6 md:px-24">
           <h2 className="text-2xl md:text-3xl font-bold font-primary text-brand-dark mb-6">
             Programs Story
@@ -217,14 +222,41 @@ const ProjectDetail = () => {
             Integrity is our anchor. This live counter provides visual proof of
             how your capital is transforming the lives of single mothers.
           </p>
+
+          {/* Extended story */}
+          {project.extendedStory && (
+            <div className="mt-12">
+              <div className="text-base md:text-lg font-secondary text-brand-dark-400 leading-relaxed space-y-4 mb-6">
+                {project.extendedStory.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+
+              {/* Story image */}
+              {project.storyImage && (
+                <div className="w-full rounded-lg overflow-hidden">
+                  <img
+                    src={project.storyImage}
+                    alt={`${project.title} extended`}
+                    className="w-full h-[300px] md:h-[420px] object-cover"
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
+
+      {/* Horizontal divider */}
+      <div className="max-w-5xl mx-auto px-6 md:px-24 py-2 ">
+        <hr className="border-t border-brand-dark-200/30" />
+      </div>
 
       {/* ═══════════════════════════════════════════
           SECTION 3 — SUPPORT THIS INITIATIVE
       ═══════════════════════════════════════════ */}
-      <section className="pb-20 md:pb-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-24">
+      <section className="pb-20 md:pb-28 py-8 md:py-10">
+        <div className="max-w-5xl mx-auto px- md:px-24">
           <h2 className="text-2xl md:text-3xl font-bold font-primary text-brand-dark mb-3">
             Support this Initiative
           </h2>
