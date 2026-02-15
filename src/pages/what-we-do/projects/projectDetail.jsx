@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import SendDonation from "./Project Details Form/sendDonation";
 import projectsData from "./projectsData";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const project = projectsData.find((p) => p.id === parseInt(projectId));
   const [copied, setCopied] = useState(false);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
   /* ── 404 Handling ── */
   if (!project) {
@@ -277,12 +279,12 @@ const ProjectDetail = () => {
                 PesaPal provides the "Ropes" needed to move these mothers from
                 subsistence to surplus.
               </p>
-              <Link
-                to="/donate"
-                className="inline-flex items-center justify-center px-6 py-3 bg-brand-brown text-white font-bold text-xs rounded-full hover:bg-brand-brown/90 transition-colors uppercase tracking-wider w-fit"
+              <button
+                onClick={() => setIsDonationModalOpen(true)}
+                className="inline-flex items-center justify-center px-6 py-3 bg-brand-brown text-white font-bold text-xs rounded-full hover:bg-brand-brown/90 transition-colors uppercase tracking-wider w-fit cursor-pointer"
               >
                 Send Donation
-              </Link>
+              </button>
             </div>
 
             {/* Card 2 — Equipment */}
@@ -305,6 +307,12 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Donation Modal */}
+      <SendDonation
+        isOpen={isDonationModalOpen}
+        onClose={() => setIsDonationModalOpen(false)}
+      />
     </div>
   );
 };
