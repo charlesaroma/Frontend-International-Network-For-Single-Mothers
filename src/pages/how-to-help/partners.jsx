@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import TechnicalMentorForm from "./partnersForms/technicalMentorForm";
+import CommunityEquipperForm from "./partnersForms/communityEquipperForm";
 
 const Partners = () => {
+  const [isTechnicalMentorFormOpen, setIsTechnicalMentorFormOpen] =
+    useState(false);
+  const [isCommunityEquipperFormOpen, setIsCommunityEquipperFormOpen] =
+    useState(false);
+
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,12 +77,13 @@ const Partners = () => {
               </li>
             </ul>
             <div className="flex justify-center md:justify-end">
-              <a
-                href="#"
-                className="inline-block bg-brand-lilac/80 hover:bg-brand-lilac text-white font-primary font-semibold text-xs md:text-sm tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-300"
+              <button
+                type="button"
+                onClick={() => setIsTechnicalMentorFormOpen(true)}
+                className="inline-block bg-brand-lilac/80 hover:bg-brand-lilac text-white font-primary font-semibold text-xs md:text-sm tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-300 cursor-pointer"
               >
                 Become a Technical Mentor
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -114,12 +122,13 @@ const Partners = () => {
               </li>
             </ul>
             <div className="flex justify-center md:justify-start">
-              <a
-                href="#"
-                className="inline-block bg-brand-teal-800 hover:bg-brand-teal-900 text-white font-primary font-semibold text-xs md:text-sm tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-300"
+              <button
+                type="button"
+                onClick={() => setIsCommunityEquipperFormOpen(true)}
+                className="inline-block bg-brand-teal-800 hover:bg-brand-teal-900 text-white font-primary font-semibold text-xs md:text-sm tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-300 cursor-pointer"
               >
                 Inquire About Equippers Portal
-              </a>
+              </button>
             </div>
           </div>
 
@@ -189,6 +198,15 @@ const Partners = () => {
           </div>
         </div>
       </div>
+
+      <TechnicalMentorForm
+        isOpen={isTechnicalMentorFormOpen}
+        onClose={() => setIsTechnicalMentorFormOpen(false)}
+      />
+      <CommunityEquipperForm
+        isOpen={isCommunityEquipperFormOpen}
+        onClose={() => setIsCommunityEquipperFormOpen(false)}
+      />
     </section>
   );
 };

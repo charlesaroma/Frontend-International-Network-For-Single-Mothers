@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import Hero from './donateHero'
-import Stats from './stats'
-import InvestmentTiers from './investmentTiers'
-import PathToProsperity from './pathToProsperity'
-import EmpowerAMotherToday from './empowerAMotherToday'
-import DonationModal from './donationModel/DonationModal'
+import React, { useState } from "react";
+import Hero from "./donateHero";
+import Stats from "./stats";
+import InvestmentTiers from "./investmentTiers";
+import PathToProsperity from "./pathToProsperity";
+import EmpowerAMotherToday from "./empowerAMotherToday";
+import DonationModal from "./donationModel/DonationModal";
 
-
-const SeedACooperative = () => {
+const DonatePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
 
@@ -28,14 +27,14 @@ const SeedACooperative = () => {
       <InvestmentTiers onDonateClick={handleDonateClick} />
       <PathToProsperity />
       <EmpowerAMotherToday onDonateClick={() => handleDonateClick(null)} />
-      
-      <DonationModal 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
-        tier={selectedTier} 
+
+      <DonationModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        tier={selectedTier}
       />
     </div>
   );
 };
 
-export default SeedACooperative;
+export default DonatePage;

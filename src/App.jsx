@@ -15,10 +15,10 @@ import Dashboard from './pages/dashboard/dashboard';
 import OurStory from './pages/who-we-are/OurStory';
 import OurTeam from './pages/who-we-are/OurTeam';
 import TheRoadmap from './pages/who-we-are/TheRoadmap';
-import Programs from './pages/what-we-do/Programs';
+import Projects from './pages/what-we-do/projects';
 import Gallery from './pages/what-we-do/Gallery';
 import Blog from './pages/what-we-do/Blog';
-import SeedACooperative from './pages/seed-a-cooperative/seedACooperative';
+import DonatePage from './pages/Donate Page/DonatePage';
 import HowToHelp from './pages/how-to-help/howToHelp';
 import ContactUs from './pages/how-to-help/ContactUs';
 import PrivacyPolicyTermsOfUse from './pages/privacy-policy/privacyPolicy-TermsOfUse';
@@ -42,10 +42,10 @@ function App() {
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/our-team" element={<OurTeam />} />
             <Route path="/the-roadmap" element={<TheRoadmap />} />
-            <Route path="/programs" element={<Programs />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/seed-a-cooperative" element={<SeedACooperative />} />
+            <Route path="/donate" element={<DonatePage />} />
             <Route path="/how-to-help" element={<HowToHelp />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyTermsOfUse />} />
