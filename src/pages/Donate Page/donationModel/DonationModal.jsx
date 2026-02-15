@@ -76,7 +76,7 @@ const DonationModal = ({ isOpen, onClose, tier }) => {
   return (
     <>
       {/* ── FULL-SCREEN OVERLAY ── */}
-      <div className="fixed inset-0 z-100 overflow-y-auto">
+      <div className="fixed inset-0 z-100 overflow-hidden">
         {/* Dark backdrop */}
         <div
           className="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm"
