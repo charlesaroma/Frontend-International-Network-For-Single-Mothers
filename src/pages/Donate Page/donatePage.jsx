@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Hero from "./donateHero";
-import Stats from "./stats";
+import Stats from "./donateStats";
 import InvestmentTiers from "./investmentTiers";
 import PathToProsperity from "./pathToProsperity";
 import EmpowerAMotherToday from "./empowerAMotherToday";
 import DonationModal from "./donationModel/DonationModal";
 
-const DonatePage = () => {
+const donatePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
 
@@ -37,4 +37,4 @@ const DonatePage = () => {
   );
 };
 
-export default DonatePage;
+export default donatePage;

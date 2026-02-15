@@ -1,27 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Pages
 // Pages
-import Home from './pages/home/home';
-import HomeHero from './pages/home/homeHero';
-import Login from './pages/auth/login';
-import Signup from './pages/auth/signup';
-import ForgotPassword from './pages/auth/forgotPassword';
-import Dashboard from './pages/dashboard/dashboard';
+import Home from "./pages/home/home";
+import HomeHero from "./pages/home/homeHero";
+import Login from "./pages/auth/login";
+import Signup from "./pages/auth/signup";
+import ForgotPassword from "./pages/auth/forgotPassword";
+import Dashboard from "./pages/dashboard/dashboardPage";
 
 // New Sitemap Pages
-import OurStory from './pages/who-we-are/OurStory';
-import OurTeam from './pages/who-we-are/OurTeam';
-import TheRoadmap from './pages/who-we-are/TheRoadmap';
-import Projects from './pages/what-we-do/projects';
-import Gallery from './pages/what-we-do/Gallery';
-import Blog from './pages/what-we-do/Blog';
-import DonatePage from './pages/Donate Page/DonatePage';
-import HowToHelp from './pages/how-to-help/howToHelp';
-import ContactUs from './pages/how-to-help/ContactUs';
-import PrivacyPolicyTermsOfUse from './pages/privacy-policy/privacyPolicy-TermsOfUse';
+import OurStory from "./pages/who-we-are/OurStory";
+import OurTeam from "./pages/who-we-are/OurTeam";
+import TheRoadmap from "./pages/who-we-are/TheRoadmap";
+import Projects from "./pages/what-we-do/projects";
+import Gallery from "./pages/what-we-do/Gallery";
+import Blog from "./pages/what-we-do/Blog";
+import DonatePage from "./pages/Donate Page/donatePage";
+import HowToHelp from "./pages/how-to-help/howToHelpPage";
+import ContactUs from "./pages/how-to-help/ContactUs";
+import PrivacyPolicyTermsOfUse from "./pages/privacy-policy/privacyPolicy-TermsOfUse";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home/hero" element={<HomeHero />} />
-            
+
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -48,13 +48,16 @@ function App() {
             <Route path="/donate" element={<DonatePage />} />
             <Route path="/how-to-help" element={<HowToHelp />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyTermsOfUse />} />
+            <Route
+              path="/privacy-policy"
+              element={<PrivacyPolicyTermsOfUse />}
+            />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

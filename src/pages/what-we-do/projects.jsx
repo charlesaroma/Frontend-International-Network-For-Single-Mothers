@@ -1,15 +1,31 @@
-import React from 'react';
+import React from "react";
 
 const projects = () => {
   return (
-    <div className="pt-28 pb-10 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl font-primary font-bold text-brand-teal-700 mb-6">Projects</h1>
-        <p className="font-secondary text-lg text-brand-dark-400">
-          The Three Ropes: Financial Mastery, Vocational Mastery, and Family Stability.
-        </p>
+    <section
+      className="relative w-full h-[500px] md:h-[600px] bg-cover bg-center flex items-end justify-center overflow-hidden group"
+      style={{
+        backgroundImage: `url(https://ik.imagekit.io/sbgenu6wj/Internation%20Network%20For%20Single%20Mothers/IMAAGE.png)`,
+      }}
+    >
+      {/* White transparent overlay on the image */}
+      <div className="absolute inset-0 bg-white/50 transition-opacity duration-700"></div>
+
+      {/* Content with glass background */}
+      <div className="relative z-10 w-full">
+        <div className="bg-white/60 backdrop-blur-md h-auto md:h-[340px] flex flex-col justify-center items-center p-6 md:p-12 text-center w-full shadow-sm border-t border-white/50">
+          <h1 className="text-3xl md:text-6xl font-bold font-primary text-brand-teal-900 mb-4 md:mb-6 uppercase tracking-tight">
+            Scaling the <br className="hidden md:block" /> Wealth Model
+          </h1>
+          <p className="text-base md:text-xl font-secondary text-brand-dark-400 max-w-3xl mx-auto leading-relaxed">
+            When we empower the mother, we save the child. Duplicating the
+            Makindye Model is not just a theory; it is a viable strategy to
+            transform Uganda. All of our programs are designed for scale and
+            transparency.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

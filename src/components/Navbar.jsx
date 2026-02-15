@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   const menuRef = useRef(null);
 
   const menuCategories = [
@@ -122,7 +124,7 @@ const Navbar = () => {
             <div className="flex items-center gap-6 z-30 relative">
               {/* CTA BUTTON */}
               <Link
-                to="/donate"
+                to={isHomePage ? "/donate" : "/"}
                 className="
                 hidden md:inline-flex
                 items-center justify-center
@@ -136,7 +138,7 @@ const Navbar = () => {
               "
                 style={{ minWidth: "200px", height: "54px" }}
               >
-                DONATE
+                {isHomePage ? "DONATE" : "GO BACK HOME"}
               </Link>
 
               {/* TOGGLE BUTTON (BURGER / CLOSE) */}
@@ -246,7 +248,7 @@ const Navbar = () => {
             {/* Mobile Menu CTA */}
             <div className="mt-8 px-4 md:hidden">
               <Link
-                to="/donate"
+                to={isHomePage ? "/donate" : "/"}
                 onClick={() => setIsMenuOpen(false)}
                 className="
                   w-full md:w-auto
@@ -262,7 +264,7 @@ const Navbar = () => {
                 "
                 style={{ height: "54px" }}
               >
-                DONATE
+                {isHomePage ? "DONATE" : "GO BACK HOME"}
               </Link>
             </div>
           </div>
