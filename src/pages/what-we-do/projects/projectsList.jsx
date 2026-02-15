@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import projectsData from "./projectsData";
 
 const projectsList = () => {
@@ -40,7 +41,7 @@ const projectsList = () => {
   // Toggle subcategory
   const toggleSubcategory = (sub) => {
     setSelectedSubcategories((prev) =>
-      prev.includes(sub) ? prev.filter((s) => s !== sub) : [...prev, sub]
+      prev.includes(sub) ? prev.filter((s) => s !== sub) : [...prev, sub],
     );
   };
 
@@ -49,7 +50,7 @@ const projectsList = () => {
     setSelectedStatuses((prev) =>
       prev.includes(status)
         ? prev.filter((s) => s !== status)
-        : [...prev, status]
+        : [...prev, status],
     );
   };
 
@@ -59,7 +60,7 @@ const projectsList = () => {
 
     if (selectedSubcategories.length > 0) {
       results = results.filter((p) =>
-        selectedSubcategories.includes(p.subcategory)
+        selectedSubcategories.includes(p.subcategory),
       );
     }
     if (selectedStatuses.length > 0) {
@@ -74,19 +75,13 @@ const projectsList = () => {
         results.sort((a, b) => b.title.localeCompare(a.title));
         break;
       case "Newest":
-        results.sort(
-          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-        );
+        results.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         break;
       case "Oldest":
-        results.sort(
-          (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
-        );
+        results.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         break;
       case "Recently added updates":
-        results.sort(
-          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-        );
+        results.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         break;
       default:
         break;
@@ -281,9 +276,7 @@ const projectsList = () => {
                         onClick={() => toggleStatus(status)}
                         className="w-full flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-b-0"
                       >
-                        <Checkbox
-                          checked={selectedStatuses.includes(status)}
-                        />
+                        <Checkbox checked={selectedStatuses.includes(status)} />
                         <span className="text-sm font-secondary text-brand-dark-400">
                           {status}
                         </span>
@@ -328,9 +321,10 @@ const projectsList = () => {
           <div className="grow">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProjects.map((project) => (
-                <div
+                <Link
+                  to={`/projects/list/${project.id}`}
                   key={project.id}
-                  className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col"
+                  className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow"
                 >
                   {/* Image */}
                   <div className="w-full h-[160px] overflow-hidden">
@@ -360,7 +354,7 @@ const projectsList = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

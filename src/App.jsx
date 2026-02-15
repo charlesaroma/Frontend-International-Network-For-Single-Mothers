@@ -16,6 +16,7 @@ import OurTeam from "./pages/who-we-are/OurTeam";
 import TheRoadmap from "./pages/who-we-are/TheRoadmap";
 import Projects from "./pages/what-we-do/projects/projectsPage";
 import ProjectsList from "./pages/what-we-do/projects/projectsList";
+import ProjectDetail from "./pages/what-we-do/projects/projectDetail";
 import Gallery from "./pages/what-we-do/Gallery";
 import Blog from "./pages/what-we-do/Blog";
 import DonatePage from "./pages/Donate Page/donatePage";
@@ -44,6 +45,10 @@ function App() {
             <Route path="/the-roadmap" element={<TheRoadmap />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/list" element={<ProjectsList />} />
+            <Route
+              path="/projects/list/:projectId"
+              element={<ProjectDetail />}
+            />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/donate" element={<DonatePage />} />

@@ -23,9 +23,10 @@ const projectSponsorship = () => {
         {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <Link
+              to={`/projects/list/${project.id}`}
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col"
+              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow"
             >
               {/* Image */}
               <div className="w-full h-[220px] overflow-hidden">
@@ -55,7 +56,7 @@ const projectSponsorship = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
